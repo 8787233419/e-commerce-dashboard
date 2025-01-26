@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
+
+
+
+.category-image {
+    width: 200px;
+    height: 200px;
+    max-width: 220px;
+    max-height: 220px;
+    align-self: center;
+    border-radius: 8px;
+}
+
+.category-tile {
+    border-radius: 8px;
+    margin: 1em;
+    align-items: center;
+    text-align: center;
+    color: red;
+    border:none;
+    background-color: rgb(254, 247, 244);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-inside-category-tile {
+    list-style: none;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    line-break: loose;
+    font-family: "Lexend Deca", serif;
+    font-size: 16px;
+}
+
+.category-tile :hover {
+    transform: scale(1.1);
+}

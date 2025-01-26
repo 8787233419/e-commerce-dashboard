@@ -1,27 +1,27 @@
-import Navbar from './NavBar'
-import Home from './Home'
+import Navbar from './Navbar/NavBar.jsx'
+import Home from './Homepage/Home.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import Login from './login.jsx'
-import Signin from './signup.jsx'import './Navbar.css'
+import Login from './login/login.jsx'
+import Signin from './signup.jsx'
+import NewNavbar from './newnavbar.jsx';
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    
-      <div className="App">
+      <>
       <Navbar />
-      <div className="content">
-        <Home />
-         <Router>
+      {/* <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signin />} />
+        <Route path="/" element={<Home />} />
+      
       </Routes>
-    </Router>
-      </div> 
-      </div>
+    </Router> */}
+       <Home />
+    </>
   );
 }
 
