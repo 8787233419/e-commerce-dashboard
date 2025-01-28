@@ -1,0 +1,52 @@
+@import url(https://db.onlinewebfonts.com/c/926fcaaa8b66e0df67e176f329259711?family=PP+Editorial+New);
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
+
+.itempage {
+    position: relative;
+    /* margin-top: 84px; */
+    padding-top: 84px;
+    display: flex;
+}
+
+.category-pane{
+    background-color: #FFF6F3;
+    width: 8em;
+    /* margin: 4%; */
+    margin: 1.2em;
+    border: 1px solid #e53f19;
+    border-radius: 18px;
+    font-family: "PP Editorial New Regular", serif;
+    color: #e53f19;
+    font-size: 26px;
+}
+
+.category-pane ul {
+    padding: 0.5em;
+    list-style: none;
+    font-family: "Lexend Deca", serif;
+    color: #e53f19;
+}
+
+.category-pane h3 {
+    font-style: regular;
+    padding: 0.5em;
+}
+
+.category-pane hr {
+    color: #e53f19;
+
+}
+
+.category-pane a {
+    color: #e53f19;
+}
+
+/*Currently unable to change color of hr. applied color to a because applying it to li wasn't working*/
+
+.category-pane a:hover {
+    color: #a22c11;
+}
+
+.item-pane {
+    background-color: aqua;
+}

@@ -9,7 +9,7 @@
     margin: 1em;
     align-items: center;
     text-align: center;
-    color: red;
+    color: #e53f19;
     border:none;
     width: 220px;
 }
@@ -18,7 +18,7 @@
     background-color: rgb(254, 247, 244);
     border-radius: 8px;
     border: none;
-    color: red;
+    color: #e53f19;
     font-family: "Lexend Deca", serif;
     font-size: 16px;
 }
@@ -31,7 +31,7 @@
     /* margin: 5px; */
     border-radius: 2px;
     /* padding: 0.5em; */
-    border-left: red;
+    border-left: #e53f19;
     width: 20px;
 
 }
@@ -43,7 +43,7 @@
     /* margin: 5px; */
     border-radius: 2px;
     /* padding: 0.5em; */
-    border-right: red;
+    border-right: #e53f19;
     width: 20px;
 
 }
@@ -57,12 +57,12 @@
 }
 
 .plus:hover {
-    color:red;
+    color:#e53f19;
     background-color: white;
 }
 
 .minus:hover {
-    color: red;
+    color: #e53f19;
     background-color: white;
 }
 
@@ -76,7 +76,7 @@
 
 .qty-div {
     display: flex;
-    background-color: red;
+    background-color: #e53f19;
     height: 1em;
     padding: 10px;
     align-items: center;
@@ -88,6 +88,6 @@
 }
 
 /* button:hover {
-    color:red;
+    color:#e53f19;
     background-color: white;
 } */

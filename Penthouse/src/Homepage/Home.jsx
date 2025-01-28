@@ -3,6 +3,8 @@ import ArrowButton from "../arrowbutton/arrowbutton";
 import FoodItem from "../fooditem/FoodItem";
 import "./homepage.css";
 import Category from '../category/Category.jsx'
+import Navbar from "../Navbar/NavBar.jsx";
+import Footer from "../footer/Footer.jsx";
 
 const Home = () => {
   //hard-coded food items
@@ -28,6 +30,7 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
       <div className="homepage">
         <div className="special-offers">
           <img src="seafood-offer.png" className="sepcial-offers-img"></img>
@@ -58,6 +61,7 @@ const Home = () => {
         <ul className="food-list">{foodDisplay}</ul>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

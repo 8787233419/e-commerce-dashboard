@@ -1,6 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/926fcaaa8b66e0df67e176f329259711?family=PP+Editorial+New);
 
-
 .food-list {
     width: 100%;
     height: 100%;
@@ -14,7 +13,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
 }
 
 .special-offers img {
@@ -28,7 +27,7 @@
 
 h2 {
     position: relative;
-    color: red;
+    color: #e53f19;
     font-size: 64px;
     font-family: "PP Editorial New Regular", serif;
     font-style: normal;
@@ -39,6 +38,13 @@ h2 {
     height: 70px;
     margin-top: 1em;
     margin-bottom: 1em;
+    width: 100%;
+    padding: 40px;
+}
+
+.categories, .popular-items {
+    width: 100%;
+    padding: 40px;
 }
 
 a :hover {
@@ -47,7 +53,7 @@ a :hover {
 }
 
 marquee {
-    background-color: red;
+    background-color: #e53f19;
     color: white;
     height: 2em;
     align-content: center;
