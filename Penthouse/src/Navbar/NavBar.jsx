@@ -1,88 +1,77 @@
-// import './Navbar.css';
-
-// const Navbar = () => {
-//   const handleScroll = () => {
-//     window.scrollBy({
-//       top: 500, // Adjust this value to the desired scroll length
-//       behavior: 'smooth'
-//     });
-//   };
-
-
-//   return (
-//     <div className="navbar">
-//       <h1>PENTHOUSE</h1>
-//       <div className="links">
-//         <a href="/">Home</a>
-//         <a href="#categories" onClick={handleScroll}>Categories</a>
-//         <a href="/account">Account</a>
-//         <a href="/cart">Cart</a>
-//       </div>
-//     </div>
-//    );
-// }
-//export default Navbar;
-
-
-// import './Navbar.css';
-
-// const Navbar = () => {
-//   const handleScroll = () => {
-//     window.scrollBy({
-//       top: 500, // Adjust this value to the desired scroll length
-//       behavior: 'smooth'
-//     });
-//   };
-
-
-//   return (
-//     <div className="navbar">
-//       <h1>PENTHOUSE</h1>
-//       <div className="links">
-//         <a href="/">Home</a>
-//         <a href="#categories" onClick={handleScroll}>Categories</a>
-//         <a href="/account">Account</a>
-//         <a href="/cart">Cart</a>
-//       </div>
-//     </div>
-//    );
-// }
-
-
-import './Navbar.css';
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faHome, faList, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons'; 
 
 const Navbar = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
+  const [home] = useState("Home");
+  const [category] = useState("Categories");
+  const [account] = useState("Account");
+  const [cart] = useState("Cart");
+
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 925);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const handleScroll = () => {
     window.scrollBy({
-      top: 900, // Adjust this value to the desired scroll length
+      top: 500, 
       behavior: 'smooth'
     });
   };
 
-
   return (
-    <nav>
     <div className="navbar">
-      <h1>PENTHOUSE</h1>
+      <div className='logo'>
+        <h1>PENTHOUSE</h1>
+      </div>
       <div className="links">
-        <a href="/">Home</a>
-        <a href="#categories" onClick={handleScroll}>Categories</a>
-        <a href="/account">Account</a>
-        <a href="/cart">Cart</a>
-        {/* <Link to="/" >Home</Link>
-        <a href="#categories" onClick={handleScroll}>Categories</a>
-        <Link to="/account" >Account</Link>
-        <Link to="/cart" >Cart</Link> */}
+        <Link to="/">
+          {isSmallScreen && <FontAwesomeIcon icon={faHome} />}
+          {!isSmallScreen && home}
+        </Link>
+        <Link to="/categories" onClick={handleScroll}>
+          {isSmallScreen && <FontAwesomeIcon icon={faList} />}
+          {!isSmallScreen && category}
+        </Link>
+        <Link to="/account">
+          {isSmallScreen && <FontAwesomeIcon icon={faUser} />}
+          {!isSmallScreen && account}
+        </Link>
+        <Link to="/cart">
+          {isSmallScreen && <FontAwesomeIcon icon={faShoppingCart} />}
+          {!isSmallScreen && cart}
+        </Link>
+        {/* <a href="/">
+          {isSmallScreen && <FontAwesomeIcon icon={faHome} />} 
+          {!isSmallScreen && home} 
+        </a> 
+        <a href="#categories" onClick={handleScroll}>
+          {isSmallScreen && <FontAwesomeIcon icon={faList} />} 
+          {!isSmallScreen && category} 
+        </a>
+        <a href="/account">
+          {isSmallScreen && <FontAwesomeIcon icon={faUser} />} 
+          {!isSmallScreen && account} 
+        </a>
+        <a href="/cart">
+          {isSmallScreen && <FontAwesomeIcon icon={faShoppingCart} />} 
+          {!isSmallScreen && cart} 
+        </a> */}
       </div>
     </div>
-    </nav>
-   );
+  );
 }
-export default Navbar;
 
-{/* <nav style={styles.navbar}>
-      <Link to="/" style={styles.link}>Home</Link>
-      <Link to="/about" style={styles.link}>About</Link>
-      <Link to="/contact" style={styles.link}>Contact</Link>
-    </nav> */}
+export default Navbar;
