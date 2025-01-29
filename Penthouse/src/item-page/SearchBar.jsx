@@ -7,11 +7,13 @@ const SearchBar = () => {
 
     //hard-coded data the search bar searches through
     const [data, setData] = useState([
-        { id: 1, title: "SHAWARMA" },
-        {
-            id: 2,
-            title: "SANDWICH"
-        },
+        { id: 1, title: "chicken shawarma", category: "Shawarmas" },
+        { id: 2, title: "veg sandwich", category: "Sandwiches" },
+        { id: 3, title: "Veg Biryani", category: "Biryanis" },
+        { id: 4, title: "Non-veg biryani", category: "Biryanis" },
+        { id: 5, title: "Chicken sandwich", category: "Sandwiches" },
+        { id: 6, title: "noodles", category: "Chinese" },
+        { id: 7, title: "tacos", category: "Tacos" },
     ]);
 
     function search(e){
@@ -24,25 +26,7 @@ const SearchBar = () => {
     );
 
 
-  return (
-    <>
-    <div className='searchbar'>
-      <input
-            type="text"
-            className="searchbar-input"
-            placeholder="Search items..."
-            onChange={search}
-            value={query}
-            />
-            <button className="search-icon">🔍</button>
-    </div>
-    <ul>
-        {filteredData.map(item => (
-                    <li key={item.id}>{item.title}</li>
-                ))}
-    </ul>
-    </>
-  )
+  return (filteredData)
 }
 
 export default SearchBar

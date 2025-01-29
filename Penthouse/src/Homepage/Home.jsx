@@ -5,20 +5,23 @@ import "./homepage.css";
 import Category from '../category/Category.jsx'
 import Navbar from "../Navbar/NavBar.jsx";
 import Footer from "../footer/Footer.jsx";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   //hard-coded food items
   const foodList = [
-    { id: 1, img: "/Shawarma.webp", title: "SHAWARMA", price: 33 },
+    { id: 1, img: "/Shawarma.webp", title: "SHAWARMA", price: 33, category: "Shawarmas" },
     {
       id: 2,
       img: "https://imgdes.search.brave.com/Xv3D73-rAP4mx5BJcIOXixOaMN6t5izN8TX-PbTFRjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzYzLzE0Lzgy/LzM2MF9GXzYzMTQ4/MjEwXzZDVzkyYWRC/bXRDVDhzOTZXMElZ/UEpwa1pzUGg4SVE1/LmpwZw",
       title: "SANDWICH",
       price: 25,
+      category: "Sandwiches"
     },
+    { id: 3, img: "", title: "Veg Biryani", price: 55, category: "Biryanis" },
   ];
   const foodDisplay = foodList.map((item) =>
-    FoodItem(item.id, item.img, item.title, item.price)
+    FoodItem(item.id, item.img, item.title, item.price, item.category)
   );
 
   //hard-coded categories
