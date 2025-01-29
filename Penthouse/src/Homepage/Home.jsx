@@ -12,7 +12,7 @@ const Home = () => {
     { id: 1, img: "/Shawarma.webp", title: "SHAWARMA", price: 33 },
     {
       id: 2,
-      img: "https://imgs.search.brave.com/Xv3D73-rAP4mx5BJcIOXixOaMN6t5izN8TX-PbTFRjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzYzLzE0Lzgy/LzM2MF9GXzYzMTQ4/MjEwXzZDVzkyYWRC/bXRDVDhzOTZXMElZ/UEpwa1pzUGg4SVE1/LmpwZw",
+      img: "https://imgdes.search.brave.com/Xv3D73-rAP4mx5BJcIOXixOaMN6t5izN8TX-PbTFRjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzYzLzE0Lzgy/LzM2MF9GXzYzMTQ4/MjEwXzZDVzkyYWRC/bXRDVDhzOTZXMElZ/UEpwa1pzUGg4SVE1/LmpwZw",
       title: "SANDWICH",
       price: 25,
     },
@@ -33,7 +33,7 @@ const Home = () => {
       <Navbar />
       <div className="homepage">
         <div className="special-offers">
-          <img src="seafood-offer.png" className="sepcial-offers-img"></img>
+          <img src="seafood-offer.png" className="special-offers-img"></img>
         </div>
 
         <div className="heading"><a><h2>Categories</h2></a></div>

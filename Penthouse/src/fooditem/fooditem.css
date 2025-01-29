@@ -69,9 +69,13 @@
 
 .info-inside-food-tile {
     list-style: none;
+    /* display: block;
+    flex-direction: column-reverse; */
     padding: 10px;
     margin-top: 5px;
     line-break: loose;
+    min-width: 220px; /*have to make all of these responsive (use percentages maybe?)*/
+    min-height: 270px; /*these are incase the img isn't present*/
 }
 
 .qty-div {
