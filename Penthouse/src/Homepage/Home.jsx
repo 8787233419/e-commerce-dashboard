@@ -52,11 +52,15 @@ const Home = () => {
       <div class="track">
         <div class="content">&nbsp;* USE PROMO CODE "ILUVSHWRMA" FOR 40% OFF *</div>
       </div>
+      <Link to="/account">
+          {isSmallScreen && <FontAwesomeIcon icon={faUser} />}
+          {!isSmallScreen && account}
+        </Link>
       </div> */} 
 
   
 
-        <div className="heading"><a><h2>Popular Items</h2></a></div>
+        <div className="heading"><Link to='/itempage'><h2>Popular Items</h2></Link></div>
         <div className="popular-items">
         <ul className="food-list">{foodDisplay}</ul>
         </div>
