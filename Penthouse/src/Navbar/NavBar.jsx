@@ -53,22 +53,6 @@ const Navbar = () => {
           {isSmallScreen && <FontAwesomeIcon icon={faShoppingCart} />}
           {!isSmallScreen && cart}
         </Link>
-        {/* <a href="/">
-          {isSmallScreen && <FontAwesomeIcon icon={faHome} />} 
-          {!isSmallScreen && home} 
-        </a> 
-        <a href="#categories" onClick={handleScroll}>
-          {isSmallScreen && <FontAwesomeIcon icon={faList} />} 
-          {!isSmallScreen && category} 
-        </a>
-        <a href="/account">
-          {isSmallScreen && <FontAwesomeIcon icon={faUser} />} 
-          {!isSmallScreen && account} 
-        </a>
-        <a href="/cart">
-          {isSmallScreen && <FontAwesomeIcon icon={faShoppingCart} />} 
-          {!isSmallScreen && cart} 
-        </a> */}
       </div>
     </div>
   );

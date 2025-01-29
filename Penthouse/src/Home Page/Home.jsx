@@ -3,6 +3,7 @@ import FoodItem from "../Food Item/FoodItem.jsx";
 import "./homepage.css";
 import Category from '../Category/Category.jsx'
 import Slideshow from "../SlideShow/SlideShow.jsx";
+import MarqueeComponent from "../Home Page/Marquee.jsx";
 
 const Home = () => {
   //hard-coded food items
@@ -35,10 +36,11 @@ const Home = () => {
         <div className='categories'>
         <ul className="food-list">{categoryDisplay}</ul>
         {/* <ArrowButton right={true}/> */}
-        </div>
-        <marquee behavior="slide" direction="right" loop="infinite">
+      </div>
+        {/* <marquee behavior="slide" direction="right" loop="infinite">
           * USE PROMO CODE "ILUVSHWRMA" FOR 40% OFF *
-        </marquee>
+        </marquee> */}
+        <MarqueeComponent />
         <div className="heading"><a><h2>Popular Items</h2></a></div>
         <div className="popular-items">
         <ul className="food-list">{foodDisplay}</ul>
