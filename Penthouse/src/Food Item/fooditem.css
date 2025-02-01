@@ -9,7 +9,7 @@
     margin: 1em;
     align-items: center;
     text-align: center;
-    color: red;
+    color: #e53f19;
     border:none;
     width: 220px;
 }
@@ -18,7 +18,7 @@
     background-color: rgb(254, 247, 244);
     border-radius: 8px;
     border: none;
-    color: red;
+    color: #e53f19;
     font-family: "Lexend Deca", serif;
     font-size: 16px;
 }
@@ -29,7 +29,8 @@
     color: white;
     height: 2.5em;
     border-radius: 2px;
-    border-left: red;
+    /* padding: 0.5em; */
+    border-left: #e53f19;
     width: 20px;
 
 }
@@ -39,7 +40,8 @@
     color: white;
     height: 2.5em;
     border-radius: 2px;
-    border-right: red;
+    /* padding: 0.5em; */
+    border-right: #e53f19;
     width: 20px;
 
 }
@@ -53,32 +55,41 @@
 }
 
 .plus:hover {
-    color:red;
+    color:#e53f19;
     background-color: white;
 }
 
 .minus:hover {
-    color: red;
+    color: #e53f19;
     background-color: white;
 }
 
 
 .info-inside-food-tile {
     list-style: none;
+    /* display: block;
+    flex-direction: column-reverse; */
     padding: 10px;
     margin-top: 5px;
     line-break: loose;
+    min-width: 220px; /*have to make all of these responsive (use percentages maybe?)*/
+    min-height: 270px; /*these are incase the img isn't present*/
 }
 
 .qty-div {
     display: flex;
-    background-color: red;
+    background-color: #e53f19;
     height: 1em;
     padding: 10px;
     align-items: center;
     justify-content: center;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    width: 210px;
+    width: 220px;
     height: 50px;
 }
+
+/* button:hover {
+    color:#e53f19;
+    background-color: white;
+} */
