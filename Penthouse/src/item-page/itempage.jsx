@@ -2,8 +2,7 @@ import React from 'react'
 import Footer from '../footer/Footer'
 import Navbar from '../Navbar/NavBar'
 import './itempage.css'
-import SearchBar from './SearchBar'
-import FoodItem from "../fooditem/FoodItem";
+import FoodItem from "../Food Item/FoodItem";
 
 import { useState } from 'react'
 
@@ -16,7 +15,7 @@ export default function Item() {
             { id: 1, img: "/Shawarma.webp", title: "SHAWARMA", price: 55, category: "Shawarmas" },
             {
               id: 2,
-              img: "https://imgdes.search.brave.com/Xv3D73-rAP4mx5BJcIOXixOaMN6t5izN8TX-PbTFRjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzYzLzE0Lzgy/LzM2MF9GXzYzMTQ4/MjEwXzZDVzkyYWRC/bXRDVDhzOTZXMElZ/UEpwa1pzUGg4SVE1/LmpwZw",
+              img: "https://img.search.brave.com/Xv3D73-rAP4mx5BJcIOXixOaMN6t5izN8TX-PbTFRjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzYzLzE0Lzgy/LzM2MF9GXzYzMTQ4/MjEwXzZDVzkyYWRC/bXRDVDhzOTZXMElZ/UEpwa1pzUGg4SVE1/LmpwZw",
               title: "SANDWICH",
               price: 25,
               category: "Sandwiches"

@@ -2,21 +2,23 @@
     width: 200px;
     height: 200px;
     align-self: center;
-    border-radius: 8px;
+    border-top-right-radius: 21px;
+    border-top-left-radius: 21px;
 }
 
 .foodtile {
-    margin: 1em;
+    margin: 28px;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     color: #e53f19;
     border:none;
-    width: 220px;
+    /* width: 220px; */
 }
 
 .food-info {
     background-color: rgb(254, 247, 244);
-    border-radius: 8px;
+    border-top-right-radius: 21px;
+    border-top-left-radius: 21px;
     border: none;
     color: #e53f19;
     font-family: "Lexend Deca", serif;
@@ -69,11 +71,10 @@
     list-style: none;
     /* display: block;
     flex-direction: column-reverse; */
-    padding: 10px;
-    margin-top: 5px;
-    line-break: loose;
-    min-width: 220px; /*have to make all of these responsive (use percentages maybe?)*/
-    min-height: 270px; /*these are incase the img isn't present*/
+    /* padding: 10px;
+    margin-top: 5px; */
+    min-width: 200px; /*have to make all of these responsive (use percentages maybe?)*/
+    min-height: 250px; /*these are incase the img isn't present*/
 }
 
 .qty-div {
@@ -83,10 +84,23 @@
     padding: 10px;
     align-items: center;
     justify-content: center;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    width: 220px;
+    border-bottom-right-radius: 21px;
+    border-bottom-left-radius: 21px;
+    width: 200px;
     height: 50px;
+}
+
+.add-to-cart {
+    border: none;
+    background-color: #e53f19; 
+    color: white;
+    font-family: "Lexend Deca", serif;
+
+}
+
+.food-category {
+    font-size: 12px;
+    color: rgb(184, 184, 184);
 }
 
 /* button:hover {

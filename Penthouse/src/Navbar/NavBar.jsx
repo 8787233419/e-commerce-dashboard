@@ -41,7 +41,7 @@ const Navbar = () => {
           {isSmallScreen && <FontAwesomeIcon icon={faHome} />}
           {!isSmallScreen && home}
         </Link>
-        <Link to="/categories" onClick={handleScroll}>
+        <Link to="/itempage" onClick={handleScroll}>
           {isSmallScreen && <FontAwesomeIcon icon={faList} />}
           {!isSmallScreen && category}
         </Link>

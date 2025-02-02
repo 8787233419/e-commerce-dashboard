@@ -12,6 +12,7 @@
 .category-pane{
     background-color: #FFF6F3;
     width: 8em;
+    height: fit-content;
     /* margin: 4%; */
     margin: 1.2em;
     border: 1px solid #e53f19;
@@ -32,6 +33,7 @@
 .category-pane h3 {
     font-style: regular;
     padding: 0.5em;
+    font-size: 32px;
 }
 
 .category-pane hr {
