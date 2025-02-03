@@ -1,28 +1,35 @@
-import Navbar from './Navbar/NavBar.jsx'
-import Home from './Homepage/Home.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './Navbar/NavBar.jsx';
+import Home from './Home Page/Home.jsx';
 import Order from "./order.jsx";
-import './App.css'
-import Login from './login/loginSiginup.jsx'
-import NewNavbar from './newnavbar.jsx';
+import './App.css';
+import Login from "./Log-In/loginSiginup.jsx";
+import Category from './Category/Category.jsx';
 
 function App() {
-  // const [count, setCount] = useState(0)
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
+  const hideNavbarRoutes = ['/login'];  // hide navbar in login page
 
   return (
-      <>
-      <Navbar />
-      <Router>
+    <>
+      {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
       <Routes>
-        <Route path="/login" element={<Login />} />
-
         <Route path="/" element={<Home />} />
-      
+        <Route path="/categories" element={<Category />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-    </Router>
-       <Home />
     </>
   );
 }
 
-export default App
+export default App;

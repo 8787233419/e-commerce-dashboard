@@ -1,0 +1,95 @@
+@import url(https://db.onlinewebfonts.com/c/926fcaaa8b66e0df67e176f329259711?family=PP+Editorial+New);
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
+
+.itempage {
+    position: relative;
+    /* margin-top: 84px; */
+    padding-top: 84px;
+    display: flex;
+    flex-direction: row;
+}
+
+.category-pane{
+    background-color: #FFF6F3;
+    width: 8em;
+    /* margin: 4%; */
+    margin: 1.2em;
+    border: 1px solid #e53f19;
+    border-radius: 18px;
+    font-family: "PP Editorial New Regular", serif;
+    color: #e53f19;
+    font-size: 26px;
+
+}
+
+.category-pane ul {
+    padding: 0.5em;
+    list-style: none;
+    font-family: "Lexend Deca", serif;
+    color: #e53f19;
+}
+
+.category-pane h3 {
+    font-style: regular;
+    padding: 0.5em;
+}
+
+.category-pane hr {
+    color: #e53f19;
+
+}
+
+.category-pane a {
+    color: #e53f19;
+}
+
+/*Currently unable to change color of hr. applied color to a because applying it to li wasn't working*/
+
+.category-pane a:hover {
+    color: #a22c11;
+    font-style: italic;
+}
+
+.item-pane {
+    width: 80%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.search-bar {
+    padding-left: 0.5em;
+}
+
+.search-icon {
+    background-color: #FFF6F3;
+    border: 1px solid #a22c11;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.search-bar input {
+    background-color: #FFF6F3;
+    border: 1px solid #a22c11;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 2.5em;
+    width: 80%;
+    min-width: 70px;
+    max-width: 300px;
+    padding: 5px;
+    color: #a22c11;
+}
+
+.item-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-holder {
+    width: 240px;
+    height: 350px;
+}

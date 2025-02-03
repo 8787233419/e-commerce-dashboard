@@ -13,7 +13,7 @@
 
 .category-tile {
     border-radius: 8px;
-    margin: 1em;
+    margin: 1em;    
     align-items: center;
     text-align: center;
     color: red;
@@ -34,4 +34,23 @@
 
 .category-tile :hover {
     transform: scale(1.1);
+}
+
+#cat-ind{
+    margin: 1em;
+    border-radius: 18px;
+    background: #FFF6F3;
+    padding: 20px; 
+    width: 211px;
+    height: 322px; 
+}
+
+h3 {
+    font-family: "PP Editorial New", serif;
+    font-weight: bold;
+    font-size: 26px;
+    font-weight: 500;
+    color: #E53F26;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
