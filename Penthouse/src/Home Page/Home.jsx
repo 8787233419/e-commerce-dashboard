@@ -24,7 +24,14 @@ const Home = () => {
     { id: 3, img: "", title: "Veg Biryani", price: 55, category: "Biryanis" },
   ];
   const foodDisplay = foodList.map((item) =>
-    FoodItem(item.id, item.img, item.title, item.price, item.category)
+    // FoodItem(item.id, item.img, item.title, item.price, item.category)
+        <FoodItem  
+            id={item.id}
+            image={item.img} 
+            title={item.title} 
+            price={item.price} 
+            category={item.category} 
+        />
   );
   
 

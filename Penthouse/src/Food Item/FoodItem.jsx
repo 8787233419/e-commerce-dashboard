@@ -5,7 +5,7 @@ import "./fooditem.css";
 //The basic component that displays the image, title and price of the food items.
 //There will be a scrollable type list. Database in app waala area. Each of those food items will be mapped to FoodItem where it will be displayed.
 
-export default function FoodItem(id, image, title, price, category) {
+export default function FoodItem({id, image, title, price, category}) {
   const [qty, setQty] = useState(0);
   // let foodQtyIs0 = true;
   function handleAddToCart() {
@@ -56,7 +56,7 @@ export default function FoodItem(id, image, title, price, category) {
           <button className="food-info">
             <ul className="info-inside-food-tile">
               <li>
-                <img src={image} alt="food" className="foodimage" />
+                <img src={image} alt= {title} className="foodimage" />
               </li>
               <li>{title}</li>
               {/* <li className="food-category">{category}</li> */}
@@ -88,6 +88,7 @@ export default function FoodItem(id, image, title, price, category) {
     </>
   );
 }
+
 
 {
   /* <li key={id}>
