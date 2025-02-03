@@ -80,14 +80,14 @@
 .qty-div {
     display: flex;
     background-color: #e53f19;
-    height: 1em;
     padding: 10px;
     align-items: center;
     justify-content: center;
     border-bottom-right-radius: 21px;
     border-bottom-left-radius: 21px;
     width: 200px;
-    height: 50px;
+    /* height: 50px; */
+    height: fit-content;
 }
 
 .add-to-cart {

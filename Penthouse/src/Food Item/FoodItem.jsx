@@ -7,48 +7,47 @@ import "./fooditem.css";
 
 export default function FoodItem(id, image, title, price, category) {
   const [qty, setQty] = useState(0);
-  let foodQtyIs0 = true;
-  function handleAddToCart () {
-    setQty(1);
+  // let foodQtyIs0 = true;
+  function handleAddToCart() {
+    setQty(qty + 1);
     console.log("qty set to 1");
-    foodQtyIs0 = false;
-    
-  }
-  function AddToCart() {
-    // setQty(1);
-    // console.log("qty set to 1");
     // foodQtyIs0 = false;
-    if (foodQtyIs0 === true) {
-      return (
-        <div className="qty-div">
-          <button className="add-to-cart" onClick={handleAddToCart}>
-            ADD TO CART
-          </button>
-        </div>
-      );
-    } else {
-      return (
-        <div className="qty-div">
-          <button className="minus" onClick={handleClickMinus}>
-            -
-          </button>
-          <button className="food-qty">{qty}</button>
-          <button className="plus" onClick={handleClickAdd}>
-            +
-          </button>
-        </div>
-      );
-    }
   }
+  // function AddToCart() {
+  //   setQty(1);
+  //   console.log("qty set to 1");
+  //   foodQtyIs0 = false;
+  //   if (foodQtyIs0 === true) {
+  //     return (
+  //       <div className="qty-div">
+  //         <button className="add-to-cart" onClick={handleAddToCart}>
+  //           ADD TO CART
+  //         </button>
+  //       </div>
+  //     );
+  //   } else {
+  //     return (
+  //       <div className="qty-div">
+  //         <button className="minus" onClick={handleClickMinus}>
+  //           -
+  //         </button>
+  //         <button className="food-qty">{qty}</button>
+  //         <button className="plus" onClick={handleClickAdd}>
+  //           +
+  //         </button>
+  //       </div>
+  //     );
+  //   }
+  // }
   function handleClickAdd() {
     setQty(qty + 1);
-    if (qty > 0) foodQtyIs0 = false;
-    if (qty === 0) foodQtyIs0 = true;
+    // if (qty > 0) foodQtyIs0 = false;
+    // if (qty === 0) foodQtyIs0 = true;
   }
   function handleClickMinus() {
     if (qty < 1) throw new Error("You cannot have negative items");
     setQty(qty - 1);
-    if (qty === 0) foodQtyIs0 = true;
+    // if (qty === 0) foodQtyIs0 = true;
   }
   return (
     <>
@@ -65,7 +64,25 @@ export default function FoodItem(id, image, title, price, category) {
             </ul>
           </button>
           {/*quantity button */}
-          <AddToCart />
+          {/* <AddToCart /> */}
+
+          <div className="qty-div">
+            <ul className="qty-div-list">
+            {(qty != 0) && (<li>
+            <button className="minus" onClick={handleClickMinus}>
+              -
+            </button>
+            <button className="food-qty">{qty}</button>
+            <button className="plus" onClick={handleClickAdd}>
+              +
+            </button>
+            </li> )}
+            <li>
+            {(qty == 0) && (<button onClick={handleAddToCart} className="add-to-cart">ADD TO CART</button>)}
+            </li>
+            </ul>
+          </div>
+
         </div>
       </li>
     </>
