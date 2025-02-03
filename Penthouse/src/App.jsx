@@ -3,8 +3,7 @@ import Home from './Homepage/Home.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Order from "./order.jsx";
 import './App.css'
-import Login from './login/login.jsx'
-import Signin from './signup.jsx'
+import Login from './login/loginSiginup.jsx'
 import NewNavbar from './newnavbar.jsx';
 
 function App() {
@@ -13,14 +12,14 @@ function App() {
   return (
       <>
       <Navbar />
-      {/* <Router>
+      <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signin />} />
+
         <Route path="/" element={<Home />} />
       
       </Routes>
-    </Router> */}
+    </Router>
        <Home />
     </>
   );

@@ -9,17 +9,30 @@ function Login() {
     const [password, setPassword] = useState("");
     const [phone, setPhone] = useState(""); 
     const [address, setAddress] = useState(""); 
+    const [userIDvalue,setUserIDvalue]=useState("2")
 
   const handleSignUpClick = () => {
     setSignUpActive(true);
+    setPassword1("");
+    setUsername1("");
+    console.log("hi");
   };
 
   const handleSignInClick = () => {
     setSignUpActive(false);
+    setPassword("");
+    setUsername("");
+    setAddress("");
+    setPhone("");
+    console.log("sign in");
   };
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(`Username: ${username}, Password: ${password}`);
+    console.log(`Username: ${username1}, Password: ${password1}`);
+  
+    console.log(userIDvalue);
+    localStorage.setItem("IDofUSER",userIDvalue);
+    // localStorage.getItem("IDofUSER");
   };
 
   return (
