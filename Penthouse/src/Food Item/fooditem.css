@@ -95,7 +95,10 @@
     background-color: #e53f19; 
     color: white;
     font-family: "Lexend Deca", serif;
+}
 
+.add-to-cart:hover {
+    font-size: 17px;
 }
 
 .food-category {

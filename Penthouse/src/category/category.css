@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
 
-
-
 .category-image {
     width: 200px;
     height: 200px;
@@ -20,6 +18,10 @@
     color:#E53F26;
     border:none;
     background-color: rgb(254, 247, 244);
+}
+
+.category-tile:hover {
+    transform: scale(1.1);
 }
 
 .info-inside-category-tile {
