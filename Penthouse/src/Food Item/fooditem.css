@@ -77,6 +77,11 @@
     min-height: 250px; /*these are incase the img isn't present*/
 }
 
+.price {
+    color: #A82814;
+    font-weight: 500;
+}
+
 .qty-div {
     display: flex;
     background-color: #e53f19;

@@ -15,7 +15,7 @@
     height: fit-content;
     /* margin: 4%; */
     margin: 1.2em;
-    border: 1px solid #e53f19;
+    border: 2px solid #e53f19;
     border-radius: 18px;
     font-family: "PP Editorial New Regular", serif;
     color: #e53f19;
@@ -50,7 +50,19 @@
 .category-pane a:hover {
     color: #a22c11;
     font-style: italic;
+    cursor: pointer;
 }
+
+.all-categories:hover {
+    cursor: pointer;
+}
+
+.divider {
+    width: 204px;
+    height: 2px;
+    background-color: #E53F26;
+    position: relative;
+  }
 
 .item-pane {
     width: 80%;

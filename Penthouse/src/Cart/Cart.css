@@ -1,0 +1,132 @@
+@import url(https://db.onlinewebfonts.com/c/926fcaaa8b66e0df67e176f329259711?family=PP+Editorial+New);
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
+
+.cart-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 704px;
+    background: #FFF6F3;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    padding: 1.5rem;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    /* border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem; */
+  }
+  
+  /* Header */
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .cart-header h2 {
+    font-family: "PP Editorial New";
+    font-weight: 550;
+    font-size: 55px;
+    color: #E53F26;
+  }
+  
+  .cart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E53F26;
+  }
+  
+  .cart-close {
+    font-size: 1.5rem;
+    color: #E53F26;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Items List */
+  .cart-items {
+    margin-top: 1.5rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFE3D8;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart-item-name {
+    color: #E53F26;
+    font-family: "Lexend Deca";
+    font-size: 21.12px;
+
+  }
+  
+  .cart-item-price {
+     color: #E53F26;
+     font-family: "Lexend Deca";
+     font-size: 33.25px;
+     border-left: 1px solid #E53F26;
+     padding-left: 20px;
+    }
+
+  .cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  
+  .cart-qty-btn {
+    border: 1px solid #E53F26;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  /* Charges */
+  .cart-charges {
+    margin-top: 1.5rem;
+    border-top: 1px solid #E53F26;
+    padding-top: 1rem;
+  }
+  
+  .cart-charge-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 21.12px;
+    font-family: "Lexend Deca";
+    color: #E53F26;
+  }
+  
+  /* Total and Continue Button */
+  .cart-total-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid #E53F26;
+    padding-top: 1rem;
+  }
+  
+  .cart-total {
+    font-size: 56.32px;
+    font-family: "PP Editorial New";
+    display: flex;
+    justify-content: space-between;
+    color: #E53F26;
+  }
+  
+  .cart-continue {
+    width: 223px;
+    border: 1px solid #E53F26;
+    color: #E53F26;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: none;
+  }
+  

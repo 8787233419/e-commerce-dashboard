@@ -60,7 +60,7 @@ export default function FoodItem({id, image, title, price, category}) {
               </li>
               <li>{title}</li>
               {/* <li className="food-category">{category}</li> */}
-              <li>₹{price}</li>
+              <li className="price">₹{price}</li>
             </ul>
           </button>
           {/*quantity button */}
