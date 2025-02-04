@@ -39,7 +39,6 @@ export default function Item() {
       );
 
       const itemDisplay = filteredData.map((item) => 
-        // FoodItem(item.id, item.img, item.title, item.price, item.category))
         <div className="item-holder" key={item.id}>
         <FoodItem  
           id={item.id}
@@ -49,6 +48,23 @@ export default function Item() {
           category={item.category} 
         />
         </div>)
+
+      let itemDisplay2 = null;
+
+      const handleCategoryClick = (categ) => {
+        const categoryOnlyData = data.filter(item => (item.category == categ));
+        itemDisplay2 = categoryOnlyData.map((item) => 
+          <div className="item-holder" key={item.id}>
+          <FoodItem  
+            id={item.id}
+            image={item.img} 
+            title={item.title} 
+            price={item.price} 
+            category={item.category} 
+          />
+          </div>)
+          console.log('shawaramsa')
+      }
   
   return (
     <>
@@ -56,10 +72,10 @@ export default function Item() {
     <div className='itempage'>
 
       <div className="category-pane">
-        <h3>Categories</h3>
+        <a><h3>Categories</h3></a>
         <hr />
         <ul>
-        <li><a>Shawarmas</a></li>
+        <li><a onClick={() => handleCategoryClick('Shawarmas')}>Shawarmas</a></li>
         <li><a>Sandwiches</a></li>
         <li><a>Biryanis</a></li>
         <li><a>Chinese</a></li>
@@ -85,6 +101,8 @@ export default function Item() {
             {filteredData.map(item => (<li key={item.id}>{item.title}</li>))}
           </ul> */}
           {itemDisplay}
+          {(filteredData == null) && (<p>No items found</p>)}
+          {itemDisplay2}
         </div>
         </div>
       </div>
