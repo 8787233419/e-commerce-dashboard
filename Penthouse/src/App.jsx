@@ -20,7 +20,7 @@ function App() {
 function AppContent() {
   const location = useLocation();
 
-  const hideNavbarRoutes = ['/login'];  // hide navbar in login page
+  const hideNavbarRoutes = [];  // hide navbar in login page
 
   return (
     <>

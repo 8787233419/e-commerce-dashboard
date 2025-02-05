@@ -5,10 +5,12 @@
 }
 .logoutContainer{
    
-    margin:50px auto;
+    margin:0px auto;
     display: flex;
     flex-direction: column;
     gap:2vw;
+    position: relative;
+    top:100px;
 }
 .logoutHeading{
     display: flex;
