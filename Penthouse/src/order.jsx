@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./order.css";
-
 function Order() {
   const [user, setUser] = useState(null);
   const [orders, setOrders] = useState([]);
+  const navigate1 = useNavigate();
 
-
-  const IDofUSER = Number(localStorage.getItem("IDofUSER")) || 0;
+  const IDofUSER = localStorage.getItem("IDofUSER") || 0;
   
   console.log("User ID from localStorage:", IDofUSER);
 
@@ -18,7 +18,7 @@ function Order() {
       upiId: "sagnikdey@oksbi",
       addressUser: "Flat No. 502, Om Shanti Apartments, Linking Road, Bandra West, Mumbai - 400050",
       orderId: 101,
-      userId: 2,
+      userId: "sgd",
       keyValuePairs: [
         { key: "category", value: "Fast Food" },
         { key: "orderName", value: "Cheese Burger" },
@@ -34,7 +34,7 @@ function Order() {
       upiId: "sagnikdey@oksbi",
       addressUser: "Flat No. 502, Om Shanti Apartments, Linking Road, Bandra West, Mumbai - 400050",
       orderId: 104,
-      userId: 2,
+      userId: "sgd",
       keyValuePairs: [
         { key: "category", value: "Main Course" },
         { key: "orderName", value: "Grilled Salmon" },
@@ -50,7 +50,7 @@ function Order() {
       upiId: "akKumar@okicici",
       addressUser: "XYZ Corporate Pvt. Ltd., 3rd Floor, Nariman Point Tower, Nariman Point, Mumbai - 400021",
       orderId: 105,
-      userId: 1,
+      userId: "abh",
       keyValuePairs: [
         { key: "category", value: "Main Course" },
         { key: "orderName", value: "Grilled Salmon" },
@@ -60,6 +60,13 @@ function Order() {
       ],
     },
   ];
+
+  const logoutInAction = () => {
+    localStorage.clear(); // clear local storage
+    
+     navigate1("/logout");
+
+  };
 
   useEffect(() => {
     localStorage.setItem("newOrderJSON", JSON.stringify(newOrderr));
@@ -92,7 +99,7 @@ function Order() {
               <div className="mobileNo">+91 {user.phoneNo}</div>
             </div>
             <div className="logOut">
-              <button className="logOutBut">
+              <button className="logOutBut" onClick={logoutInAction}>
                 <img
                   className="picc"
                   src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-coloricon/21/38-512.png"
@@ -114,7 +121,7 @@ function Order() {
           </div>
         </div>
       ) : (
-        <div className="noUser">No user found.</div>
+        <div className="noUser"></div>
       )}
 
       {orders.length > 0 ? (

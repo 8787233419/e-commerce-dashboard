@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './Navbar/NavBar.jsx';
 import Home from './Home Page/Home.jsx';
 import Order from "./order.jsx";
+import Logout from "./Logout/logout.jsx"
 import './App.css';
 import Login from "./Log-In/loginSiginup.jsx";
 import Category from './Category/Category.jsx';
@@ -27,6 +28,7 @@ function AppContent() {
         <Route path="/categories" element={<Category />} />
         <Route path="/order" element={<Order />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </>
   );
