@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './Navbar/NavBar.jsx';
 import Home from './Home Page/Home.jsx';
 import Order from "./order.jsx";
+import Logout from "./Logout/logout.jsx"
 import './App.css';
 import Login from "./Log-In/loginSiginup.jsx";
 import Category from './Category/Category.jsx';
@@ -31,6 +32,7 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/itempage" element={<Item />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </>
   );
