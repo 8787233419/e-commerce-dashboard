@@ -7,7 +7,7 @@ import { faHome, faList, faUser, faShoppingCart } from '@fortawesome/free-solid-
 const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
   const [home] = useState("Home");
-  const [category] = useState("Categories");
+  const [itempage] = useState("Items");
   const [account] = useState("Account");
   const [cart] = useState("Cart");
 
@@ -43,9 +43,9 @@ const Navbar = () => {
         </Link>
         <Link to="/itempage" onClick={handleScroll}>
           {isSmallScreen && <FontAwesomeIcon icon={faList} />}
-          {!isSmallScreen && category}
+          {!isSmallScreen && itempage}
         </Link>
-        <Link to="/account">
+        <Link to="/login">
           {isSmallScreen && <FontAwesomeIcon icon={faUser} />}
           {!isSmallScreen && account}
         </Link>

@@ -1,28 +1,39 @@
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import Navbar from './Navbar/NavBar.jsx'
-import Home from './Home Page/Home.jsx'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './Navbar/NavBar.jsx';
+import Home from './Home Page/Home.jsx';
+import Order from "./order.jsx";
+import './App.css';
+import Login from "./Log-In/loginSiginup.jsx";
+import Category from './Category/Category.jsx';
 import Item from './item-page/itempage.jsx';
-// import Login from './Log-In/login.jsx'
-import Signup from './signup.jsx'
 import Cart from './Cart/Cart.jsx'
-// import NewNavbar from './newnavbar.jsx';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-      <Router>
-        <Navbar />
-          <Routes>
-            {/* <Route path="/login" element={<Login />} /> */}
-            <Route path="/signup" element={<Signup />} /> 
-            <Route path="/" element={<Home />} />
-            <Route path="/itempage" element={<Item />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
-      </Router>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
-export default App
+function AppContent() {
+  const location = useLocation();
+
+  const hideNavbarRoutes = ['/login'];  // hide navbar in login page
+
+  return (
+    <>
+      {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Category />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/itempage" element={<Item />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
